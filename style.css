@@ -1,1 +1,183 @@
+/* ============================================================
+   BASE
+   ============================================================ */
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
+body {
+  background: #f6f6f3;
+  color: #1d1d1d;
+  font-family: Georgia, 'Times New Roman', serif;
+  padding: 2rem 1.5rem 4rem;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.hint {
+  color: #5a5a56;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   ESCENARIO
+   ============================================================ */
+.escenario {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 520px;
+  margin: 0 auto;
+  border: 2px solid #d9d8d2;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #e8f4f6;
+  cursor: crosshair;
+}
+
+#calamar-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #e8f4f6;
+  z-index: 1;
+}
+
+/* ============================================================
+   PAC-MAN / CARITA
+   ============================================================ */
+#actor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  z-index: 2;
+  will-change: transform;
+}
+
+.elipse {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(6px, 2.4vw, 10px);
+  width: 30em;
+  height: 15em;
+  background: #ffd400;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: width 0.6s ease, height 0.6s ease;
+}
+
+.elipse:focus-visible {
+  outline: 3px solid #1d1d1d;
+  outline-offset: 6px;
+}
+
+.elipse.redonda {
+  width: 90px;
+  height: 90px;
+  cursor: default;
+}
+
+.ojo {
+  position: absolute;
+  top: 3.5em;
+  width: 5em;
+  height: 6em;
+  background: #fff;
+  border-radius: 50%;
+  transition: opacity 0.3s;
+}
+
+.ojo.izquierdo { left: 8.5em; }
+.ojo.derecho   { left: 16.5em; }
+
+.elipse.redonda .ojo { opacity: 0; }
+
+.pupila {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.8em;
+  height: 1.8em;
+  margin: -0.9em 0 0 -0.9em;
+  background: #000;
+  border-radius: 50%;
+}
+
+#pac {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90px;
+  height: 90px;
+  transform: translate(-50%, -50%);
+  display: none;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* ============================================================
+   BOLITAS
+   ============================================================ */
+.bolita {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 50%;
+  background: #d99a2b;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15);
+  z-index: 2;
+  animation: latido 1s ease-in-out infinite;
+}
+
+@keyframes latido {
+  50% { transform: scale(1.35); }
+}
+
+/* ============================================================
+   MARCADOR
+   ============================================================ */
+#score {
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  letter-spacing: 0.08em;
+  color: #1d1d1d;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+#score.visible { opacity: 1; }
+
+/* ============================================================
+   TEXTO DE AYUDA
+   ============================================================ */
+#hint {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #5a5a56;
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 600px) {
+  .escenario { height: 380px; }
+  .elipse { font-size: 7px; }
+  #pac { width: 70px; height: 70px; }
+}
