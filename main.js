@@ -256,8 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
     mouse.angle = angleBetween(squid.x, squid.y, mouse.x, mouse.y);
   };
 
-  escenario.addEventListener('mousemove', onPointerMoveCalamar);
-  escenario.addEventListener('touchmove', onPointerMoveCalamar, { passive: true });
+    escenario.addEventListener('mousemove', onPointerMoveCalamar);
+  escenario.addEventListener('touchmove', (e) => {
+    e.preventDefault();   // evita scroll mientras se mueve el dedo
+    onPointerMoveCalamar(e);
+  }, { passive: false });
+  escenario.addEventListener('touchstart', onPointerMoveCalamar, { passive: true });
 
   const iniciarCalamar = () => {
     updateStage();
