@@ -36,7 +36,17 @@ h1 {
   border-radius: 12px;
   overflow: hidden;
   cursor: crosshair;
+  background: linear-gradient(
+    to bottom,
+    #a8e6f0 0%,
+    #6bc5d8 25%,
+    #2a8ba8 60%,
+    #0d4d6b 100%
+  );
 
+  /* Evita el zoom accidental en móvil al hacer doble toque */
+  touch-action: none;
+}
   /* Fondo marino: degradado de azul claro (superficie) a azul profundo */
   background: linear-gradient(
     to bottom,
