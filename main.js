@@ -352,7 +352,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 650);
   };
 
-  elipse.addEventListener('click', convertir);
+    elipse.addEventListener('click', convertir);
+  elipse.addEventListener('touchend', (e) => {
+    e.preventDefault();
+    convertir();
+  });
   elipse.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
