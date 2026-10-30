@@ -10,7 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ============================================================
      CALAMAR
      ============================================================ */
-  const canvas = document.getElementById('calamar-canvas');
+    /* ---------- BURBUJAS DE FONDO ---------- */
+  const crearBurbujas = () => {
+    const NUM_BURBUJAS = 15;
+    for (let i = 0; i < NUM_BURBUJAS; i++) {
+      const burbuja = document.createElement('div');
+      burbuja.className = 'burbuja';
+      const tamaño = 4 + Math.random() * 14;
+      burbuja.style.width = tamaño + 'px';
+      burbuja.style.height = tamaño + 'px';
+      burbuja.style.left = Math.random() * 100 + '%';
+      burbuja.style.animationDuration = (6 + Math.random() * 8) + 's';
+      burbuja.style.animationDelay = (Math.random() * 10) + 's';
+      escenario.appendChild(burbuja);
+    }
+  };
+  crearBurbujas();
+   const canvas = document.getElementById('calamar-canvas');
   const ctx = canvas.getContext('2d');
   const PI2 = Math.PI * 2;
 
