@@ -280,12 +280,12 @@ h1 {
   margin-top: 1rem;
   font-style: italic;
 }
-
+    RESPONSIVE - MOVIL Y TABLE
 /* ============================================================
-   RESPONSIVE
-   ============================================================ */
 @media (max-width: 600px) {
   .escenario { height: 380px; }
   .elipse { font-size: 7px; }
   #pac { width: 70px; height: 70px; }
 }
+
+   ============================================================ */
