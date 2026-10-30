@@ -3,157 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ensayos de Fernando Narváez sobre familia, feminismo, fascismo, antiintelectualismo y otros temas desde una perspectiva marxista.">
-  <meta name="theme-color" content="#f6f6f3">
-  <title>Fernando Narváez — Ensayos</title>
-
-  <!-- Fuente Newsreader (variable) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
-
+  <title>Criaturas — Pac-Man + Calamar</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <h1>Criaturas</h1>
+  <p class="hint">Mueve el mouse dentro del recuadro. Haz clic en la carita.</p>
 
-  <header class="site-header">
-    <h1>Fernando Narváez</h1>
+  <div id="escenario" class="escenario">
+    <canvas id="calamar-canvas"></canvas>
 
-    <nav aria-label="Navegación principal">
-      <ul id="menu-principal">
-        <li><a href="#inicio">Inicio</a></li>
-        <li>
-          <button
-            type="button"
-            class="nav-toggle"
-            data-toggle="familia-crisis"
-            aria-expanded="false"
-            aria-controls="familia-crisis">
-            Familia en crisis
-          </button>
-        </li>
-        <li><a href="#feminismo">Feminismo</a></li>
-        <li><a href="#fascismo">Fascismo</a></li>
-        <li><a href="#antiintelectualismo">Antiintelectualismo</a></li>
-        <li><a href="#criaturas">Criaturas</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main id="contenido">
-
-    <!-- ============================================================
-         INICIO
-         ============================================================ -->
-    <section id="inicio" class="escrito">
-      <h2>Inicio</h2>
-      <p>Bienvenido. Aquí reúno ensayos y notas sobre familia, feminismo, fascismo, antiintelectualismo y otros temas, escritos desde una perspectiva marxista. Usa el menú superior para navegar entre secciones o desplázate hacia abajo.</p>
-      <p class="pendiente">(Este texto es un ejemplo. Puedes editarlo o borrarlo.)</p>
-    </section>
-
-    <!-- ============================================================
-         FAMILIA EN CRISIS — colapsable
-         ============================================================ -->
-    <section id="familia-crisis" class="escrito" hidden>
-      <h2>Familia en crisis</h2>
-      <article>
-        <p>Suponer que la familia patriarcal entra en crisis gracias al feminismo me parece una tesis atractiva, pero demasiado optimista para ser cierta; es como echarse flores y colgarse medallitas autocomplacientes por una conquista que habría ocurrido con o sin ti. Me parece mucho más realista y razonable suponer que la familia entra en crisis en este momento por la intensificación de las contradicciones del capitalismo que "obligan" a la burguesía (en la medida en que no sabe hacer otra cosa más que operar de acuerdo a las necesidades del capital) a combatir la caída de la tasa de ganancia colocando el salario por debajo del mínimo necesario para la reproducción de la unidad familiar en su forma tradicional donde el hombre se dedica a la producción y la mujer a la reproducción de la fuerza de trabajo. En otras palabras, la burguesía ya ni siquiera es capaz de pagar suficiente para que la familia patriarcal siga operando como unidad de reproducción material e ideológica de la sociedad de clases.</p>
-
-        <p>No se trata de que los hombres "no quieran renunciar a sus privilegios". ¿Puede identificarse ahí la influencia del idealismo burgués que explica las cosas por la voluntad de las personas? De la misma manera en que el patriarcado no desaparece por el acto voluntario de "descentralizar a los hombres de tu vida", tampoco desaparece por una renuncia voluntaria por parte de los hombres a los privilegios asociados a la posición dominante en el sistema de diferenciación sexogenérico. De poco sirve renunciar voluntariamente a lo que el modo de producción exige. De hecho, si por arte de magia, todos los hombres renunciaran al privilegio masculino de la noche a la mañana, la contradicción entre trabajo productivo y reproductivo simplemente se reorganizaría bajo el siguiente sistema de diferenciación disponible después del sexogenérico, muy probablemente la raza, como ya ocurre en los países imperialistas donde los trabajos de cuidado y reproducción se asignan a los inmigrantes racializados del sur global.</p>
-
-        <p>Por ahora, esos cuerpos racializados son principalmente de mujeres, pero no necesitan serlo y si lo obligas, me parece que el capital podría, en teoría, adaptarse a ese nuevo sistema, pero tendría que haber una razón para ello. La normalización del racismo durante el actual proceso de fascistización facilitaría esa transición. En ese caso, los trabajos invisibilizados de reproducción (que engendran una posición de subordinación en la escala social) serían responsabilidad no ya de las mujeres, sino de los pobres racializados de los países dependientes. En todo caso, estaríamos ante una contradicción interna del capitalismo. Por un lado, tenemos la tendencia a organizar la contradicción entre trabajo productivo y reproductivo a partir del sistema de diferenciación que siempre le ha funcionado, el que tiene más a la mano y sobre el que se construye el patriarcado: el sexogenérico. Por otro lado, tenemos la tendencia a combatir la caída de la tasa de ganancia bajando el salario por debajo de lo que requiere la familia patriarcal para seguir cumpliendo su función como unidad de reproducción de la sociedad de clases. En torno a esa contradicción se dan los tirones superestructurales sobre la forma específica de la familia como unidad de reproducción.</p>
-
-        <p>Desde una perspectiva marxista, la única manera de superar la contradicción entre trabajo productivo y reproductivo es superar el modo de producción que la requiere a través de una revolución socialista, no a través de la reconfiguración de los sistemas de diferenciación secundarios que la organizan. Si esto es verdad, la crisis o desestabilización de la familia patriarcal no sería tanto (ni principal ni exclusivamente) un "logro" del feminismo, sino un síntoma de la crisis capitalista. De hecho, lo que se entendía al principio como causa se revela en este análisis como consecuencia. La familia patriarcal ya entra en crisis por el desarrollo normal del capitalismo que se vuelve incapaz de reproducir la existencia material de la sociedad bajo las formas ya conocidas (lo que llamamos "tradicionales") y precisamente porque esa crisis ya existe, el patriarcado capitalista le concede esa "conquista" al feminismo; tolera una desestabilización de la familia que de todas maneras era ya inevitable.</p>
-
-        <p>El capital le permite al feminismo (como movimiento que administra la resistencia de uno de sus grupos oprimidos y la dirige hacia formas inofensivas para la sociedad de clases) reclamar una victoria sobre una batalla que ya había perdido; te deja comerte las migajas que ya se le habían caído del plato o te cede el espacio que puede cederte y de este modo, transforma una derrota en una concesión que deberías agradecerle y que te motiva a insistir por la vía reformista que "está dando resultado". La burguesía te dice: "sigue concentrándote en una contradicción secundaria, ya ves que sí te está funcionando" y la conciencia de los grupos oprimidos, desesperada por una conquista real, está más que feliz de colgarse la medallita.</p>
-
-        <p>Por supuesto, la comprensión correcta de la relación causa-consecuencia en este caso requiere un análisis del problema de la relación entre objetividad y subjetividad desde el marxismo. Desde esa perspectiva, el feminismo no es la "causa" de la desestabilización de la familia, pero sí es una consecuencia superestructural que a su vez, se convierte en causa, porque sujeto y objeto, base y superestructura, están en una relación dialéctica, una relación de mutua determinación desigual que es más fuerte en una dirección que en otra. Lo subjetivo existe porque existe lo objetivo y lo subjetivo tiene una influencia limitada por lo objetivo, hace lo que tiene que hacer y en muchos casos, únicamente lo que puede hacer. Pero eso es algo muy distinto a simplemente celebrar que el feminismo desestabilizó a la familia patriarcal. La relación está ahí, pero no es tan sencilla ni unidireccional como te gustaría. Hay de conquistas a conquistas y hay que tener cuidado con simplemente creer lo que queremos creer. La historia también sabe decirte únicamente lo que quieres escuchar.</p>
-
-        <p>En todo caso, desde el marxismo, sabemos que la familia es una simple unidad de organización arbitraria y cambiante subordinada a las necesidades de cada modo de producción. Como el Estado, se transformará o desaparecerá cuando deje de ser necesaria para el funcionamiento del modo de producción. Esto difícilmente puede comprenderse si las masas están pensando más bien en términos de "¿familia bien o familia mal?". La familia es una unidad de organización y reproducción. Está ahí porque hace algo y toma la forma que necesita tomar para la reproducción de lo que ya existe. Admite la acción y modificación consciente de todo lo superestructural. Pero no más.</p>
-      </article>
-    </section>
-
-    <!-- ============================================================
-         FEMINISMO
-         ============================================================ -->
-    <section id="feminismo" class="escrito">
-      <h2>Feminismo</h2>
-      <article>
-        <p>Las cosas que las mujeres están diciendo de los hombres y las cosas que los hombres están diciendo de las mujeres son el tipo de cosas que me gustaría ver al proletariado decir de la burguesía y no creo que sea coincidencia que una cosa parezca sustituir a la otra. A medida que el capitalismo agudiza sus contradicciones, los roles de género tradicionales se vuelven insostenibles, no porque la gente se dé cuenta de que son una limitación arbitraria sobre la identidad diseñada para perpetuar un sistema de dominación como el patriarcado, sino porque sencillamente ya no existen las condiciones materiales capaces de engendrar el tipo de persona que puede responder a las exigencias de su modelo ideal y conservador de identidad sexogenérica.</p>
-
-        <p>Si uno se anima a seguir esta interpretación, los roles de género tradicionales estarían amenazados no por influencia de un progresismo que sólo existe en nuestras cabezas, sino por el desarrollo natural de las contradicciones del mismo modo de producción. En otras palabras, el mismo capitalismo se habría encargado de hacer que resulte prácticamente imposible que hombres y mujeres cumplan con las exigencias de ser un hombre o una mujer tradicional. Las tendencias progresistas como el feminismo o el movimiento lgbtq+ son apenas justificaciones a posteriori de ese proceso, momentos en que la conciencia espontánea justifica algo que ya está ocurriendo y que era inevitable según sus propias reglas. No provocamos el cambio, simplemente racionalizamos procesos superestructurales que responden al desarrollo del mismo modo de producción.</p>
-
-        <p>Los sectores que hoy están defendiendo los roles de género característicos del patriarcado no estarían reaccionando ante su supuesta desestabilización progresista, sino simplemente a la desintegración de los códigos de diferenciación sexogenéricos que resultan del mismo desarrollo natural del capitalismo (lo cual coincide con nuestro concepto de neoliberalismo progresista). Sería irónico que hubiera algo de verdad en su paranoia reaccionaria, pero no como ellos creen. Es decir, sí, la familia tradicional está bajo ataque, pero es el mismo capitalismo el que te la está destruyendo. Ni el progresismo, ni el feminismo, ni su temido e inexistente marxismo cultural tuvieron nada que ver; no fuimos nosotros, sino el mismo capitalismo que tanto defienden el que está barriendo con sus preciosos roles de género tradicionales.</p>
-
-        <p>Si juntas la contradicción entre trabajo productivo y reproductivo (característica del capitalismo) con la tendencia de los salarios a caer por debajo del nivel mínimo necesario para mantener a una familia (también característica del capitalismo) lo que obtienes es una sociedad en la que cada vez son menos las mujeres que pueden ser simplemente "amas de casa" sin necesidad de trabajar y cada vez son menos los hombres que pueden cumplir el papel de "padre de familia". La familia es la unidad de reproducción material e ideológica de la sociedad de clases, pero es perfectamente posible que el capitalismo haya agudizado sus contradicciones hasta el punto en que incluso esa unidad es insostenible. Para ponerlo en términos sencillos, la miseria en la que el capitalismo te ha sumergido es tanta que ya ni siquiera puede producir las identidades tradicionales que necesita para sobrevivir.</p>
-
-        <p>El patriarcado sostiene el capitalismo, pero el capitalismo ya ni siquiera puede sostener al patriarcado. Ante esta crisis del sistema, obviamente se desarrolla una tendencia reaccionaria que busca proteger y recuperar esos roles de género tradicionales y cuando no culpan al progresismo (como conviene a la burguesía), se convence a hombres y mujeres de culparse uno al otro (lo que curiosamente, también le conviene a la burguesía). ¿Y no es eso lo que estamos viendo? Los hombres culpan a las mujeres por no ser "amas de casa tradicionales" y "buenas madres", mientras que las mujeres culpan a los hombres por no poder proveer, por no ser "adultos funcionales". En vez de cuestionar la función de esos roles de género para la supervivencia del patriarcado capitalista, las personas se empiezan a reclamar entre sí por no estar a su altura.</p>
-
-        <p>Ciertamente, sería tentador reclamar la responsabilidad por esa neurosis reaccionaria y decir que el feminismo ha tenido tantos avances que hasta ha logrado amenazar a la familia tradicional. Mira nada más, resulta que los progresistas tuvimos tanto éxito que hasta pusimos en crisis los roles de género tradicionales, ¿no? Sospecho que la verdad es más amarga. Por lo demás, esta interpretación coincide con la revisión a la teoría tradicional del proceso de fascistización dentro del marxismo: no es necesariamente un momento defensivo de la burguesía ante una revolución inminente, sino que también puede ser un momento ofensivo ante un proletariado debilitado.</p>
-
-        <p>Ciertamente, la defensa de los roles de género tradicionales es parte del proceso de fascistización, pero ese proceso se está activando no porque el capitalismo tenga ninguna necesidad de defenderse de una revolución inexistente, sino simplemente porque está reconfigurándose a sí mismo. El fascismo destruye la capacidad de organización del proletariado, pero es también una reestructuración rápida y violenta que garantiza la supervivencia de la sociedad de clases, una operación que el capitalismo hace sobre su propio cuerpo. Si esto es cierto, el proletariado ya ha sido derrotado y lo que estamos viendo, tanto en esta tendencia reaccionaria en torno a los roles de género como en otros síntomas del proceso de fascistización, ya sólo es a la burguesía peleándose con las consecuencias de su mismo sistema. Es verdad que nuestro enemigo de clase sigue tirando golpes, pero eso no quiere decir que estemos de pie.</p>
-      </article>
-    </section>
-
-    <!-- ============================================================
-         FASCISMO
-         ============================================================ -->
-    <section id="fascismo" class="escrito">
-      <h2>Fascismo</h2>
-      <article>
-        <p>La banda que no entiende cuál es la relación entre antiintelectualismo y proceso de fascistización es la misma que no entiende la relación entre fascismo y pensamiento mágico. Por más que uno les explica la manera en que el capitalismo se beneficia de la producción de sujetos ignorantes e irracionales, ellos siguen atorados en la defensa del irracionalismo y la ignorancia como rebelión relativista de los sujetos marginados contra esos dos grandes fantasmas: el academicismo y la tiranía de la racionalidad occidental. Yo hablo desde el marxismo-leninismo, donde la teoría es cristalización de la conciencia de una clase y donde el proletariado tiene derecho a lo mejor de la producción cultural; ellos hablan desde el sentido común de la posmodernidad, desde lo que Kohan llama las metafísicas post, donde lo único que necesita el sujeto en resistencia es su experiencia, su intuición y su identidad. Su problema no es que yo sea mamón, sino que no son capaces de identificar las suposiciones ideológicas de su propio discurso y su lugar en la lucha de clases. No las identifican como suposiciones ideológicas, sino como la verdad. El fascismo les va a pasar por encima mientras siguen de necios atorados en el antiintelectualismo porque alguien les dijo alguna vez en un tiktok que leer era privilegio o un performance clasista imperdonable. Esa es la gente a la que el da comezón lo que escribo. Avanzaríamos mucho simplemente con que entendieran la lógica de su propia reacción o por lo menos el marco en el que se inserta su propio razonamiento. No llegaron a esas ideas de la nada. Hubo todo un proceso histórico que las puso ahí, un proyecto de desarme ideológico del proletariado. Pero si prefieren pensar que simplemente defiendo la lectura por mamón, ¿quién soy yo para sacarlos del error?</p>
-      </article>
-    </section>
-
-    <!-- ============================================================
-         ANTIINTELECTUALISMO
-         ============================================================ -->
-    <section id="antiintelectualismo" class="escrito">
-      <h2>Antiintelectualismo</h2>
-      <article>
-        <p>En última instancia, no te puedes politizar en serio escuchando rock o reguetón (o trova cubana). Ese es el problema de los trashers, o de los fans de Bad Bunny, por ejemplo: creen que es más que suficiente con los balbuceos politicoides de sus ídolos pop. Los resultados son patentes: dichos endebles principios políticos les hacen entrar en confusiones con suma facilidad, y los vuelve inútiles para cualquier práctica realmente transformadora, terminando muy a menudo, sin que se den cuenta, en el extremo derecho del espectro.</p>
-
-        <p>Por otra parte, tampoco podemos esperar que la música que nos gusta coincida punto por punto con la teoría y la práctica política con la que simpatizamos. En cualquier producto cultural siempre vamos a encontrar contradicciones, de todo tipo. No podemos esperar que nuestros cantantes o bandas preferidas tengan la claridad de Marx o Lenin.</p>
-
-        <p>Si quieres politizarte en serio, lee teoría seria, y analiza en serio la realidad concreta con ella. Y sobre todo, comprométete en una práctica política real, lo más alejada de las tendencias de la cultura del espectáculo, que en general no son otras que las tendencias del capitalismo.</p>
-      </article>
-    </section>
-
-    <!-- ============================================================
-         CRIATURAS (Pac-Man + Calamar en un solo escenario)
-         ============================================================ -->
-    <section id="criaturas" class="escrito">
-      <h2>Criaturas</h2>
-      <p class="pendiente">Un calamar curioso y un Pac-Man hambriento comparten el mismo escenario. Mueve el mouse dentro del recuadro, haz clic en la carita, y observa.</p>
-
-      <div id="escenario" class="escenario">
-        <!-- Calamar: canvas de fondo -->
-        <canvas id="calamar-canvas"></canvas>
-
-        <!-- Pac-Man / carita: encima del calamar -->
-        <div id="score" aria-live="polite">Puntos: 0</div>
-        <div id="actor">
-          <div class="elipse" id="elipse" role="button" tabindex="0"
-               aria-label="Haz clic para convertir la carita en Pac-Man">
-            <div class="ojo izquierdo"><div class="pupila"></div></div>
-            <div class="ojo derecho"><div class="pupila"></div></div>
-          </div>
-          <canvas id="pac" width="120" height="120"
-                  aria-label="Pac-Man. Haz clic para que se vaya"></canvas>
-        </div>
+    <div id="score" aria-live="polite">Puntos: 0</div>
+    <div id="actor">
+      <div class="elipse" id="elipse" role="button" tabindex="0"
+           aria-label="Haz clic para convertir la carita en Pac-Man">
+        <div class="ojo izquierdo"><div class="pupila"></div></div>
+        <div class="ojo derecho"><div class="pupila"></div></div>
       </div>
+      <canvas id="pac" width="120" height="120"
+              aria-label="Pac-Man. Haz clic para que se vaya"></canvas>
+    </div>
+  </div>
 
-      <p id="hint">Haz clic en la carita</p>
-    </section>
+  <p id="hint">Haz clic en la carita</p>
 
-  </main>
-
-  <footer>
-    <p>&copy; <span id="anio"></span> Fernando Narváez. Todos los textos son de mi autoría.</p>
-  </footer>
-
-  <script src="main.js" defer></script>
+  <script src="main.js"></script>
 </body>
 </html>
